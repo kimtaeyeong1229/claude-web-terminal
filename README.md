@@ -5,6 +5,15 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## 왜 Claude Web Terminal인가?
+
+1. **인터넷 창을 닫아도 에이전트가 종료되지 않는다** — PTY 기반으로 Claude CLI 프로세스가 서버에서 독립 실행되므로, 브라우저를 닫거나 네트워크가 끊겨도 작업이 계속 진행된다. 다시 접속하면 그대로 이어서 확인할 수 있다.
+2. **다수의 에이전트를 관리하기 편하다** — 탭/사이드바 UI로 여러 Claude CLI 세션을 한 화면에서 동시에 생성·전환·모니터링할 수 있다. 터미널 창을 여러 개 띄울 필요가 없다.
+
+## 실제 생김새
+
+![Claude Web Terminal 스크린샷](screenshot.png)
+
 ## 주요 기능
 
 - **멀티세션** — 여러 Claude CLI를 탭으로 동시 실행
