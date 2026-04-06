@@ -64,7 +64,10 @@ class Session:
             env["TERM"] = "xterm-256color"
             env["COLORTERM"] = "truecolor"
             cmd_args = [CLAUDE_CMD] + self.extra_args
-            os.execvpe(CLAUDE_CMD, cmd_args, env)
+            try:
+                os.execvpe(CLAUDE_CMD, cmd_args, env)
+            except Exception:
+                os._exit(127)
         else:
             os.close(pid)
             self.pid = child_pid
