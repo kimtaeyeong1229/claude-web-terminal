@@ -13,6 +13,7 @@ import os
 import pty
 import re
 import select
+import shutil
 import signal
 import struct
 import termios
@@ -23,7 +24,7 @@ from pathlib import Path
 from aiohttp import web
 
 STATIC_DIR = Path(__file__).parent / "static"
-CLAUDE_CMD = os.environ.get("CLAUDE_CMD", "claude")
+CLAUDE_CMD = os.environ.get("CLAUDE_CMD", shutil.which("claude") or "claude")
 MY_PID = os.getpid()
 
 
